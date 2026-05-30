@@ -1,0 +1,15 @@
+{
+  "hooks": {
+    "PreToolUse": [
+      {
+        "matcher": "Bash",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "INPUT=$(cat); CMD=$(echo \"$INPUT\" | python3 -c \"import sys,json; print(json.load(sys.stdin).get('tool_input',{}).get('command',''))\"); echo \"$CMD\" | grep -qE 'git commit' || exit 0; bash \"$(git rev-parse --show-toplevel)/module-09/.claude/smoke-gate.sh\""
+          }
+        ]
+      }
+    ]
+  }
+}
