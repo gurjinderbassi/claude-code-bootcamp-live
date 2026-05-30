@@ -1,0 +1,13 @@
+Think of Claude as a capable junior engineer: before handing off any task, you
+   write a clear ticket (Plan) so there's no ambiguity about what "done" looks
+  like. The junior then writes the code (Implement) — quickly and without       
+  complaint, but only as well as the spec you gave them. You run the test suite
+  (Test) to catch mechanical mistakes, the same way you'd check that the feature
+   actually launches before declaring it finished. Then you sit down and read
+  the diff yourself (Review) — this is you, the senior, owning the output,
+  because the junior can't catch their own blind spots. Only after you're
+  satisfied do you cut the commit (Commit), making the change part of the
+  permanent record. Skipping Review is the most common failure mode because it
+  turns "AI-assisted coding" into "AI-trusted coding," and trusting output you
+  haven't read is how subtle bugs, security holes, and hallucinated logic ship
+  to production.
